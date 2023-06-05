@@ -44,6 +44,11 @@ body {
   justify-content: center;
   width: 80vw;
 }
+.content .header #menu {
+  display: none;
+  font-size: 60px;
+  color: white;
+}
 .content .header #projects {
   margin-left: 4rem;
 }
@@ -215,19 +220,64 @@ body {
   border-radius: 4rem;
   width: 4vmax;
   height: 4vmax;
+  cursor: pointer;
 }
 #up .arrow {
   color: black;
   font-size: 3vmax;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
+  .show {
+    padding: 0rem 3.2rem 0rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: fixed;
+    bottom: 580px;
+    right: 10px;
+    background-color: white;
+    width: 20px;
+    height: 220px;
+  }
+  .show .dropButtons {
+    margin-top: 1rem;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid black;
+  }
+  .header #menu {
+    text-align: end;
+    background-color: #0B0B0B;
+    width: 200vw;
+    position: fixed;
+    right: 10px;
+    cursor: pointer;
+  }
+  .header button {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    top: 0.1px;
+  }
+  .header #menu {
+    text-align: end;
+    background-color: #0B0B0B;
+    width: 200vw;
+    position: fixed;
+    right: 10px;
+    cursor: pointer;
+  }
+  .header button {
+    display: none;
+  }
   .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
   }
   .profile .imgProfile {
     width: 10vw;
@@ -244,10 +294,9 @@ body {
   .content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
-    margin-bottom: 30rem;
-    height: 200vw;
+    height: 80vw;
   }
   .content button {
     width: 14vw;
@@ -261,7 +310,7 @@ body {
     border-bottom: 2px solid gray;
   }
   #contentSkills {
-    height: 255vw;
+    height: 160vw;
     min-height: auto;
     display: flex;
     flex-direction: column;
@@ -269,7 +318,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     width: auto;
-    margin-top: 5rem;
   }
   #contentSkills .skills {
     display: flex;
@@ -299,7 +347,73 @@ body {
     color: white;
   }
   #contentProjects {
-    height: 250vw;
+    height: 100vw;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15vw;
+  }
+  #contentProjects .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  #contentProjects .projects h1 {
+    color: white;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #FFFFFF;
+    width: auto;
+    height: auto;
+    font-size: 10vmin;
+  }
+}
+@media (max-width: 400px) {
+  #contentSkills {
+    height: 180vw;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10rem;
+    margin-top: 0;
+    width: auto;
+  }
+  #contentSkills .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #contentSkills .skills h1 {
+    color: white;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #FFFFFF;
+    width: 28vw;
+    height: auto;
+    text-align: center;
+    font-size: 10vmin;
+  }
+  #contentSkills .skills p {
+    margin-top: 5vw;
+    font-size: 7vw;
+    text-align: center;
+    width: 100vw;
+    height: auto;
+  }
+  #contentSkills .skills i {
+    margin: 3rem;
+    font-size: 20vmin;
+    color: white;
+  }
+  #contentProjects {
+    height: 100vw;
     min-height: auto;
     display: flex;
     flex-direction: column;

@@ -14,7 +14,7 @@
   <!-- style.css -->
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
+  <script src="index.js"></script>
 </head>
 
 <body>
@@ -24,6 +24,12 @@
         <a href="#contentAbout"><button id="about">About me</button></a>
         <a href="#contentSkills"><button id="skills">Skills</button></a>
         <a href="#contentProjects"><button id="projects">Projects</button></a>
+        <i id="menu" class='bx bx-menu'></i>
+      </div>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#contentAbout"><button class="dropButtons">About me</button></a>
+        <a href="#contentSkills"><button class="dropButtons">Skills</button></a>
+        <a href="#contentProjects"><button class="dropButtons">Projects</button></a>
       </div>
       <div class="profile">
         <img class="imgProfile" src="./img/profile.png" alt="">
@@ -95,9 +101,18 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+        <div id="hiddenParagraph">
+          <a href="https://pablofrcosta.github.io/password-generator/" target="_blank"><img src="./img/generator.png"
+              class="d-block w-100 mb-4" alt="Gerador de senhas"></a>
+          <img src="./img/nullbank.png" class="d-block w-100" alt="Projeto Banco">
+        </div>
       </div>
     </div>
-    <a href="#about"><button id="up"><i class='arrow bx bx-chevron-up'></i></button></a>
+    <a href="#about" onclick="scrollToAnchor(event, 'about')">
+      <button id="up">
+        <i class='arrow bx bx-chevron-up'></i>
+      </button>
+    </a>
 
   </div>
 
